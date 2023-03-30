@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#select{
+    width: 14em;
+    height: 2.5rem;
+}
+.width{
+    width: 23em !important;
+}
+.orange{
+    background-color: orangered !important;
+}
