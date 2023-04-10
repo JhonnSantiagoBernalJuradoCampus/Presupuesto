@@ -8,38 +8,19 @@ export default{
     placeholderValor: "Valor",
     submit: "Enviar",
     fragShow(){
-
-
-        
         document.querySelector("#main").insertAdjacentHTML("beforeend", `
-        <div class="col-4">
-            <select name="#" id="select" class="form-select">
-                <option selected="true" disabled>${this.opcion.defecto}</option>
-                <option value="ingreso">${this.opcion.ingreso}</option>
-                <option value="egreso">${this.opcion.egreso}</option>
-            </select>  
-        </div>
-        <div class="col-4">
-            <input type="text" placeholder="${this.placeholder}" class="form-control">
-        </div>
-        <div class="col-4">
-            <div class="row">
-                <div class="col-6">
-                    <input type="text" placeholder="${this.placeholderValor}" class="form-control">
-                </div>
-                <div class="col-6">
-                    <button type="submit" class="btn bg-primary" id="submit">${this.submit}</button>
-                </div>
-            </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <form id="form">
+                <select name="select" id="select" class="form-select">
+                    <option selected="true" disabled>${this.opcion.defecto}</option>
+                    <option value="0">${this.opcion.ingreso}</option>
+                    <option value="1">${this.opcion.egreso}</option>
+                </select>  
+                <input type="text" name="descripcion" placeholder="${this.placeholder}" class="form-control">
+                <input type="text" name="valor" placeholder="${this.placeholderValor}" class="form-control">
+                <button type="submit" class="btn bg-primary" value="guardar" id="submit">${this.submit}</button>
+            </form>
         </div>
         `);
-        const selectElement = document.querySelector("#select");
-        const submitElement = document.querySelector("#submit");
-        selectElement.addEventListener('change',(e)=>{
-            console.log(`elegiste ${e.target.value}`);
-            
-        })
-        
-        
     }
 }
