@@ -45,7 +45,6 @@ formulario.addEventListener("submit", (e)=>{
     }
     
     let total = ingresos + egresos
-    console.log(total);
     dineroTotal.innerHTML=`
     <h1 class="col-12 d-flex justify-content-center align-items-center" id="total">$${total}</h1>
     `;
@@ -56,5 +55,10 @@ formulario.addEventListener("submit", (e)=>{
     document.querySelector("#egresos-1").innerHTML=`
     <p class="my-2 ms-4 ps-5" id="egresos-1">$${Math.abs(egresos)}</p>
     `
+    let porcentaje = (Math.abs(egresos)*100)/ingresos
+    document.querySelector("#porcentaje").innerHTML=`
+    <p class="my-2 ms-3" id="porcentaje">${porcentaje.toFixed(2)}%</p>
+    `
+    formulario.reset();
 })
 

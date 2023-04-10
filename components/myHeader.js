@@ -25,7 +25,7 @@ export default{
                 <div class="col-12 d-flex justify-content-center align-items-center width orange">
                     <p class="my-2 me-3 pe-5">${this.egresos.menos}</p>
                     <p class="my-2 ms-4 ps-5" id="egresos-1">${this.egresos.saldo}</p>
-                    <p class="my-2 ms-3">${this.egresos.porcentaje}</p>
+                    <p class="my-2 ms-3" id="porcentaje">${this.egresos.porcentaje}</p>
                 </div>
             </div>
         </div>
