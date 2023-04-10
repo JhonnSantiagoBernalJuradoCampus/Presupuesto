@@ -13,7 +13,7 @@ export default{
     fragShow(){
         document.querySelector("#header").insertAdjacentHTML("beforeend", `
         <h2 class="col-12 d-flex justify-content-center align-items-center pb-2 fs-5">${this.h2}</h2>
-        <h1 class="col-12 d-flex justify-content-center align-items-center" id="h1">${this.h1}</h1>
+        <h1 class="col-12 d-flex justify-content-center align-items-center" id="total">${this.h1}</h1>
         <div class="container-fluid pt-3">
             <div class="row mb-2 d-flex justify-content-center">
                 <div class="col-12 d-flex justify-content-center align-items-center width bg-info">
